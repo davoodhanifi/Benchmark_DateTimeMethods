@@ -21,4 +21,22 @@ public class DateParserBenchmark
     {
         _parser.GetYearFromSplitString(_dateTime);
     }
+
+    [Benchmark]
+    public void GetYearFromSubstring()
+    {
+        _parser.GetYearFromSubstring(_dateTime);
+    }
+
+    [Benchmark]
+    public void GetYearFromSpan()
+    {
+        _parser.GetYearFromSpan(_dateTime);
+    }
+    
+    [Benchmark]
+    public void GetYearFromSpanWithManualConversion()
+    {
+        _parser.GetYearFromSpanWithManualConversion(_dateTime);
+    }
 }
