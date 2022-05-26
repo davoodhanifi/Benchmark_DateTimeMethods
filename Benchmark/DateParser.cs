@@ -11,4 +11,9 @@ public class DateParser
     {
         return int.Parse(dateTime.Split('-')[0]);
     }
+
+    public int GetYearFromSubstring(string dateTime)
+    {
+        return int.Parse(dateTime.Substring(0, dateTime.IndexOf('-')));
+    }
 }
